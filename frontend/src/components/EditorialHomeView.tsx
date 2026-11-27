@@ -208,13 +208,22 @@ export function EditorialHomeView({
               <span>{isEn ? 'Articles & How Calculations Work' : 'Artigos & Como Foram Feitos os Cálculos'}</span>
             </a>
             <a
-              href={isEn ? '/reports/GENESIS_Scientific_Report_EN_2026.pdf' : '/reports/GENESIS_Relatorio_Cientifico_PT-BR_2026.pdf'}
+              href="/reports/GENESIS_Article_EN.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
             >
               <FileText className="h-4 w-4" />
-              <span>{isEn ? 'Read Full PDF Report (EN)' : 'Ler Relatório Completo (PDF)'}</span>
+              <span>{isEn ? 'Read Article (EN)' : 'Ler Artigo (EN)'}</span>
+            </a>
+            <a
+              href="/reports/GENESIS_Artigo_PT-BR.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              <FileText className="h-4 w-4" />
+              <span>{isEn ? 'Read Article (PT-BR)' : 'Ler Artigo (PT-BR)'}</span>
             </a>
           </div>
 
