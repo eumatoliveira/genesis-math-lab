@@ -62,17 +62,13 @@ export function TopNavBar({
           <button
             type="button"
             onClick={() => onChangeView('research-home')}
-            className="flex items-center gap-2.5 text-left"
+            className="flex items-center gap-2 text-left"
           >
-            {/* 4-tile geometric mark uniting Microsoft Fluent grid + Google palette */}
-            <div className="grid h-8 w-8 shrink-0 grid-cols-2 gap-0.5 rounded-lg bg-[#F8F9FA] p-1.5 ring-1 ring-[#DADCE0]">
-              <span className="rounded-[2px] bg-[#EA4335]" />
-              <span className="rounded-[2px] bg-[#34A853]" />
-              <span className="rounded-[2px] bg-[#1A73E8]" />
-              <span className="rounded-[2px] bg-[#FBBC04]" />
-            </div>
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#09203F] to-[#1A73E8] font-serif-editorial text-lg font-bold text-white shadow-2xs">
+              π
+            </span>
             <div className="min-w-0">
-              <span className="font-display text-sm font-bold tracking-tight text-[#1F1F1F]">GENESIS</span>
+              <span className="font-display text-base font-bold tracking-tight text-[#1F1F1F]">genesis</span>
             </div>
           </button>
         </div>

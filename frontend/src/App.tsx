@@ -62,7 +62,7 @@ export function App() {
     const match = window.location.pathname.match(/^\/artigos\/([^/]+)$/)
     return match ? match[1] : null
   })
-  const [language, setLanguage] = useState<'pt' | 'en'>('pt')
+  const [language, setLanguage] = useState<'pt' | 'en'>('en')
   const [hardwareProfile, setHardwareProfile] = useState<HardwareProfile>(() => storageAdapter.getHardwareProfile())
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
 
@@ -328,7 +328,13 @@ export function App() {
     <div className="flex min-h-screen flex-col bg-white text-[#1F1F1F]">
       <TopNavBar
         activeView={activeView}
-        onChangeView={setActiveView}
+        onChangeView={(v) => {
+          setActiveView(v)
+          if (v === 'research-home') {
+            setActiveArticleId(null)
+            window.history.pushState({}, '', '/')
+          }
+        }}
         language={language}
         onToggleLanguage={() => setLanguage((l) => (l === 'pt' ? 'en' : 'pt'))}
         hardwareProfile={hardwareProfile}

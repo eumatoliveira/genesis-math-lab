@@ -31,12 +31,12 @@ describe('GENESIS Observatory UI Integration', () => {
   it('renders Google x Microsoft editorial home with articles, navigates to 3D lab, switches problems, and toggles Wi-Fi field', async () => {
     render(<App />)
 
-    await waitFor(() => expect(screen.getByText('GENESIS')).toBeInTheDocument())
-    expect(screen.getByText(/Descoberta Matemática Orientada por Visualização/i)).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByText('genesis')).toBeInTheDocument())
+    expect(screen.getByText(/Visual-First Mathematical Discovery Laboratory/i)).toBeInTheDocument()
     expect(screen.getByText(/Como Cada Cálculo Foi Projetado, Executado e Verificado/i)).toBeInTheDocument()
 
     // Click CTA to enter 3D Laboratory
-    fireEvent.click(screen.getByRole('button', { name: /Abrir Laboratório 3D/i }))
+    fireEvent.click(screen.getByRole('button', { name: /Open 3D Laboratory/i }))
     expect(screen.getByTestId('mock-3d-canvas')).toBeInTheDocument()
     expect(screen.getByText(/Campo Físico \(Modo Wi-Fi\): ON/i)).toBeInTheDocument()
 
