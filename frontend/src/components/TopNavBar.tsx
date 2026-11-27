@@ -1,13 +1,10 @@
+import { useEffect, useState } from 'react'
 import {
   BookOpen,
-  Bot,
-  Cpu,
   Download,
   FileText,
-  GitBranch,
   Home,
   Menu,
-  ShieldCheck,
   Sparkles,
 } from 'lucide-react'
 import type { HardwareProfile, LabViewId } from '../domain/types'
@@ -29,10 +26,6 @@ interface Props {
 const NAV_TABS: Array<{ id: LabViewId; label: string; icon: typeof Sparkles }> = [
   { id: 'research-home', label: 'Início & Artigos', icon: Home },
   { id: 'command-center', label: 'Lab 3D & Padrões', icon: Sparkles },
-  { id: 'agents-observatory', label: '17 Agentes', icon: Bot },
-  { id: 'knowledge-evolution', label: 'Hipóteses & Grafo', icon: GitBranch },
-  { id: 'proof-counterexample', label: 'Provas & Red Team', icon: ShieldCheck },
-  { id: 'history-hardware', label: 'Histórico & Hardware', icon: Cpu },
   { id: 'reports-sources', label: 'Relatórios & Fontes', icon: BookOpen },
 ]
 
@@ -46,6 +39,26 @@ export function TopNavBar({
   onExportMarkdown,
   onExportPdf,
 }: Props) {
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  useEffect(() => {
+    const updateScrollProgress = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop || 0
+      const docHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const progress = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0
+      setScrollProgress(progress)
+    }
+
+    updateScrollProgress()
+    window.addEventListener('scroll', updateScrollProgress, { passive: true })
+    window.addEventListener('resize', updateScrollProgress, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', updateScrollProgress)
+      window.removeEventListener('resize', updateScrollProgress)
+    }
+  }, [])
+
   return (
     <header className="sticky top-0 z-30 border-b border-[#E3E8EF] bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-between gap-2 px-3 py-2.5 lg:px-5">
@@ -137,6 +150,15 @@ export function TopNavBar({
             <span className="hidden sm:inline">.PDF</span>
           </button>
         </div>
+      </div>
+      <div
+        aria-hidden="true"
+        className="h-[3px] w-full bg-[#E3E8EF]/60"
+      >
+        <div
+          className="h-full bg-gradient-to-r from-[#09203F] to-[#1A73E8] transition-[width] duration-100 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
       </div>
     </header>
   )
