@@ -9,6 +9,7 @@ import {
 import { buildMarkdownReport, buildPdfReportBlob, triggerFileDownload } from './adapters/reportExporter'
 import { storageAdapter } from './adapters/storageAdapter'
 import { ControlDeck } from './components/ControlDeck'
+import { ArticleDetailPage } from './components/ArticleDetailPage'
 import { EditorialHomeView } from './components/EditorialHomeView'
 import { InfiniteSearchPanel } from './components/InfiniteSearchPanel'
 import {
@@ -22,6 +23,7 @@ import { PatternInsightsPanel } from './components/PatternInsightsPanel'
 import { ProblemSidebar } from './components/ProblemSidebar'
 import { TopNavBar } from './components/TopNavBar'
 import { ALL_PROBLEMS, getProblemById } from './domain/problemsCatalog'
+import { RESEARCH_ARTICLES } from './domain/researchArticles'
 import type {
   DiscoveryHit,
   HardwareProfile,
@@ -56,6 +58,10 @@ export function App() {
   const [selectedProblem, setSelectedProblem] = useState<ProblemSpec>(() => getProblemById('genesis-wave'))
   const [params, setParams] = useState<Record<string, number>>(() => ({ ...getProblemById('genesis-wave').defaultParams }))
   const [activeView, setActiveView] = useState<LabViewId>('research-home')
+  const [activeArticleId, setActiveArticleId] = useState<string | null>(() => {
+    const match = window.location.pathname.match(/^\/artigos\/([^/]+)$/)
+    return match ? match[1] : null
+  })
   const [language, setLanguage] = useState<'pt' | 'en'>('pt')
   const [hardwareProfile, setHardwareProfile] = useState<HardwareProfile>(() => storageAdapter.getHardwareProfile())
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
@@ -356,7 +362,30 @@ export function App() {
         />
 
         <main className="min-w-0 flex-1 overflow-y-auto bg-[#F8F9FA]">
-          {activeView === 'research-home' && (
+          {activeView === 'research-home' && activeArticleId && (
+            <ArticleDetailPage
+              article={RESEARCH_ARTICLES.find((a) => a.id === activeArticleId) ?? RESEARCH_ARTICLES[0]}
+              language={language}
+              onBack={() => {
+                setActiveArticleId(null)
+                window.history.pushState({}, '', '/')
+              }}
+              onSelectArticle={(id) => {
+                setActiveArticleId(id)
+                window.history.pushState({}, '', `/artigos/${id}`)
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+              onOpenProblemInLab={(pid) => {
+                const p = getProblemById(pid)
+                handleSelectProblem(p)
+                setActiveArticleId(null)
+                setActiveView('command-center')
+                window.history.pushState({}, '', '/')
+              }}
+            />
+          )}
+
+          {activeView === 'research-home' && !activeArticleId && (
             <EditorialHomeView
               language={language}
               problems={ALL_PROBLEMS}
@@ -370,6 +399,11 @@ export function App() {
                 const p = getProblemById(pid)
                 handleSelectProblem(p)
                 setActiveView('command-center')
+              }}
+              onOpenArticlePage={(aid) => {
+                setActiveArticleId(aid)
+                window.history.pushState({}, '', `/artigos/${aid}`)
+                window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             />
           )}

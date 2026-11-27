@@ -41,10 +41,7 @@ export function TopNavBar({
   onChangeView,
   language,
   onToggleLanguage,
-  hardwareProfile,
-  onChangeProfile,
   backendOnline,
-  problemCount,
   onToggleSidebar,
   onExportMarkdown,
   onExportPdf,
@@ -75,15 +72,7 @@ export function TopNavBar({
               <span className="rounded-[2px] bg-[#FBBC04]" />
             </div>
             <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <span className="font-display text-sm font-bold tracking-tight text-[#1F1F1F]">GENESIS</span>
-                <span className="rounded-full bg-[#E8F0FE] px-2 py-0.5 font-mono text-[10px] font-semibold text-[#1A73E8]">
-                  {problemCount} PROBLEMAS
-                </span>
-              </div>
-              <p className="hidden text-[11px] text-[#444746] sm:block">
-                Laboratório Autônomo Visual-First • 17 Agentes Científicos
-              </p>
+              <span className="font-display text-sm font-bold tracking-tight text-[#1F1F1F]">GENESIS</span>
             </div>
           </button>
         </div>
@@ -133,17 +122,6 @@ export function TopNavBar({
           >
             {language === 'pt' ? 'PT-BR | EN' : 'EN | PT-BR'}
           </button>
-
-          <select
-            aria-label="Perfil de Hardware Doméstico"
-            value={hardwareProfile}
-            onChange={(e) => onChangeProfile(e.target.value as HardwareProfile)}
-            className="rounded-lg border border-[#DADCE0] bg-[#F8F9FA] px-2 py-1.5 font-mono text-[11px] text-[#1F1F1F] focus:border-[#1A73E8] focus:outline-none"
-          >
-            <option value="eco">HW: Eco (Baixo Consumo)</option>
-            <option value="balanced">HW: Balanceado (PC 32GB)</option>
-            <option value="ultra">HW: Alto Desempenho</option>
-          </select>
 
           <button
             type="button"

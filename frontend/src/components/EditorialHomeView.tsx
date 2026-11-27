@@ -32,6 +32,7 @@ interface Props {
   backendOnline: boolean
   onNavigateView: (view: LabViewId) => void
   onOpenProblemInLab: (problemId: string) => void
+  onOpenArticlePage?: (articleId: string) => void
 }
 
 const OFFLINE_BOOKS_FALLBACK: Array<Record<string, unknown>> = [
@@ -108,6 +109,7 @@ export function EditorialHomeView({
   backendOnline,
   onNavigateView,
   onOpenProblemInLab,
+  onOpenArticlePage,
 }: Props) {
   const isEn = language === 'en'
   const displayBooks = books.length > 0 ? books : OFFLINE_BOOKS_FALLBACK
@@ -123,6 +125,10 @@ export function EditorialHomeView({
   const controlCount = problems.filter((p) => p.status === 'Controle Científico').length
 
   const openArticleReader = (article: ResearchArticle) => {
+    if (onOpenArticlePage) {
+      onOpenArticlePage(article.id)
+      return
+    }
     setSelectedArticleId(article.id)
     const el = document.getElementById('article-reader-panel')
     el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -173,12 +179,7 @@ export function EditorialHomeView({
         </svg>
 
         <div className="relative mx-auto max-w-5xl text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1 text-xs font-medium tracking-wide text-sky-100 backdrop-blur-sm">
-            <Sparkles className="h-3.5 w-3.5 text-sky-200" />
-            <span>Metodologia Visual-First · {problems.length} Problemas · 17 Agentes Científicos</span>
-          </div>
-
-          <h1 className="mt-5 break-words font-display text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[56px] lg:leading-[1.08]">
+          <h1 className="break-words font-display text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[56px] lg:leading-[1.08]">
             {isEn
               ? 'Visual-First Mathematical Discovery Laboratory'
               : 'Descoberta Matemática Orientada por Visualização'}
@@ -205,6 +206,15 @@ export function EditorialHomeView({
             >
               <Calculator className="h-4 w-4" />
               <span>{isEn ? 'Articles & How Calculations Work' : 'Artigos & Como Foram Feitos os Cálculos'}</span>
+            </a>
+            <a
+              href={isEn ? '/reports/GENESIS_Scientific_Report_EN_2026.pdf' : '/reports/GENESIS_Relatorio_Cientifico_PT-BR_2026.pdf'}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/20"
+            >
+              <FileText className="h-4 w-4" />
+              <span>{isEn ? 'Read Full PDF Report (EN)' : 'Ler Relatório Completo (PDF)'}</span>
             </a>
           </div>
 
