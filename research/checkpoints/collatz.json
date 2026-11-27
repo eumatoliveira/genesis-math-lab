@@ -1,0 +1,8 @@
+{
+  "problem_id": "collatz",
+  "last_seed": 42,
+  "last_strategy": "adaptive",
+  "experiment_id": "exp_9877fa98e341b0ff",
+  "sha256_hash": "0f2850a88ef1ce18296e7f49ed20353634fdfbe1b64d83c313d893b3a19de630",
+  "saved_at": "2026-11-27T15:28:31.223980+00:00"
+}

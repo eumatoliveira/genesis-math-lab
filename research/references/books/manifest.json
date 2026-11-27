@@ -1,0 +1,101 @@
+[
+  {
+    "book_id": "tao-2019-collatz-monograph",
+    "title": "Almost all orbits of the Collatz map attain almost bounded values",
+    "author": "Terence Tao (arXiv:1909.03562)",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/1909.03562",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\tao-2019-collatz-monograph.pdf",
+    "bytes_size": 1774306,
+    "sha256_hash": "62cf49d4d8e8e681c7a4738ebaf56f3dbb7b67de95f37ccbac6e428ef3fc394e",
+    "excerpt": "Monografia de referência sobre o problema 3n+1 mostrando via análise harmônica e processos estocásticos que quase todo inteiro n atinge valores abaixo de f(n) para qualquer função divergente f."
+  },
+  {
+    "book_id": "baek-2024-moving-sofa",
+    "title": "Optimality of Gerver's Sofa (119p Monograph)",
+    "author": "Jineon Baek (arXiv:2411.19826)",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/2411.19826",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\baek-2024-moving-sofa.pdf",
+    "bytes_size": 1827894,
+    "sha256_hash": "c65e6683f8cfdda6e763055139fa90d167acbbc50ef1faf29a0e06573c801b27",
+    "excerpt": "Demonstração completa em 119 páginas provando que a forma de 18 segmentos proposta por Joseph Gerver (área ≈ 2.21953) é ótima para o Problema do Sofá Móvel."
+  },
+  {
+    "book_id": "perelman-2002-ricci-flow",
+    "title": "The entropy formula for the Ricci flow and its geometric applications",
+    "author": "Grigori Perelman (arXiv:math/0211159)",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/math/0211159",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\perelman-2002-ricci-flow.pdf",
+    "bytes_size": 325949,
+    "sha256_hash": "945e278613c45ea1ab617b28c3095783d0e68958dc0546dfcfa9b42b9674fbe1",
+    "excerpt": "Artigo fundacional que introduziu o funcional W-entropia no fluxo de Ricci, viabilizando a solução da Conjectura de Poincaré (Milênio)."
+  },
+  {
+    "book_id": "helfgott-2013-ternary-goldbach",
+    "title": "Major arcs for Goldbach's problem",
+    "author": "Harald A. Helfgott (arXiv:1305.2897)",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/1305.2897",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\helfgott-2013-ternary-goldbach.pdf",
+    "bytes_size": 736679,
+    "sha256_hash": "e1de949f09005cbb28e9ca6b22e41fde61bec1850dc4922d8687f6192d630b5b",
+    "excerpt": "Avanço central no método do círculo de Hardy-Littlewood-Vinogradov que fundamentou a demonstração completa da Conjectura Fraca (Ternária) de Goldbach."
+  },
+  {
+    "book_id": "gilmer-2022-frankl-entropy",
+    "title": "Approximate union closed conjecture",
+    "author": "Zachary Chase & Shachar Lovett (arXiv:2211.11689; pós-Gilmer arXiv:2211.09055)",
+    "language": "en",
+    "source_url": "https://arxiv.org/pdf/2211.11689",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\gilmer-2022-frankl-entropy.pdf",
+    "bytes_size": 97752,
+    "sha256_hash": "f364e0f15449030ec0ef7fa32942c0575a22e12b5776472fbd5fa3a404806c1e",
+    "excerpt": "Refinamento da abordagem entrópica inaugurada por Justin Gilmer (arXiv:2211.09055, nov/2022), elevando a cota inferior da Conjectura de Frankl para conjuntos fechados por união antes do avanço até ~0.382885."
+  },
+  {
+    "book_id": "faraday-1839-electricity",
+    "title": "Experimental Researches in Electricity, Vol. 1",
+    "author": "Michael Faraday (1839, Domínio Público)",
+    "language": "en",
+    "source_url": "https://mirrors.xmission.com/gutenberg/1/4/9/8/14986/14986-0.txt",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\faraday-1839-electricity.txt",
+    "bytes_size": 1384992,
+    "sha256_hash": "1b7b8ec5c94d7b32916cfa7c8d7ddcd9818254c4ac9304436697b2c1c788eced",
+    "excerpt": "Obra fundacional de Michael Faraday sobre indução eletromagnética e visualização geométrica de linhas de força — inspiração direta da analogia de campos no Laboratório GENESIS."
+  },
+  {
+    "book_id": "einstein-1920-relativity",
+    "title": "Relativity: The Special and General Theory",
+    "author": "Albert Einstein (1920, Domínio Público)",
+    "language": "en",
+    "source_url": "https://mirrors.xmission.com/gutenberg/3/0/1/5/30155/30155-0.txt",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\einstein-1920-relativity.txt",
+    "bytes_size": 210410,
+    "sha256_hash": "d28a996db301fb944470fa6f091e0677ac82537b50e6d8db2be084a4dbc76131",
+    "excerpt": "Exposição original de Einstein sobre experimentos mentais, invariância espacial/temporal e geometria curva que fundamenta o modo de visualização relativística."
+  },
+  {
+    "book_id": "poincare-1905-science-hypothesis",
+    "title": "Science and Hypothesis (La Science et l'Hypothèse)",
+    "author": "Henri Poincaré (1905, Domínio Público / Internet Archive)",
+    "language": "en",
+    "source_url": "https://archive.org/download/scienceandhypoth00poinuoft/scienceandhypoth00poinuoft_djvu.txt",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\poincare-1905-science-hypothesis.txt",
+    "bytes_size": 468378,
+    "sha256_hash": "fbff0e2cd46abd26299623feb461d6414a0adab315211e5cf1b42db3954a581f",
+    "excerpt": "Tratado clássico de Poincaré sobre intuição matemática, convenções geométricas, sistemas dinâmicos e o papel da experimentação antes da formalização axiomática."
+  },
+  {
+    "book_id": "euclid-1908-elements-heath",
+    "title": "The Thirteen Books of Euclid's Elements, Vol. 1 (ed. T. L. Heath)",
+    "author": "Euclides de Alexandria / Thomas L. Heath (1908, Domínio Público)",
+    "language": "en",
+    "source_url": "https://archive.org/download/thirteenbookseu00heibgoog/thirteenbookseu00heibgoog_djvu.txt",
+    "local_path": "C:\\Users\\mathe\\.gemini\\antigravity\\scratch\\genesis-math-lab\\research\\references\\books\\euclid-1908-elements-heath.txt",
+    "bytes_size": 1065570,
+    "sha256_hash": "883673dc933d8512ddfa5c75e3e751197d0dde8c1e05b39950df4b8ec50ea2e6",
+    "excerpt": "Edição crítica clássica dos Elementos de Euclides (definições, postulados e demonstrações construtivas dos Livros I–II) servindo de referência axiomática histórica."
+  }
+]

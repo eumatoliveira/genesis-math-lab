@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use GENESIS in academic research or software, please cite it using these metadata."
+title: "GENESIS — Autonomous Visual-First Mathematical Discovery Laboratory"
+authors:
+  - family-names: "Oliveira"
+    given-names: "Matheus"
+    alias: "eumatoliveira"
+date-released: "2026-11-27"
+license: MIT
+repository-code: "https://github.com/eumatoliveira/genesis-math-lab"
+keywords:
+  - experimental-mathematics
+  - visual-analytics
+  - webgl
+  - multi-agent-systems
+  - symbolic-regression
+  - lean4

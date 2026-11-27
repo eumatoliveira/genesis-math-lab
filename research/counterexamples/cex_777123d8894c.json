@@ -1,0 +1,13 @@
+{
+  "counterexample_id": "cex_777123d8894c",
+  "problem_id": "collatz",
+  "hypothesis_id": "hyp_75e4e85b2d1d4c",
+  "input_witness": {
+    "in_sample_mse": 0.379194,
+    "out_of_sample_mse": 19.382639
+  },
+  "claimed_property": "Hipótese simbólica '-0.0587*x + 0.495*x/log(x + 1) + 0.5438*log(x) + 0.2891*sin(x/2) + 1.2699 + 1.3428*exp(-2*x/25)' generaliza fora da amostra",
+  "observed_failure": "Erro fora-da-amostra (19.382639) diverge >2.5x do treino (0.379194)",
+  "exact_arithmetic_verified": true,
+  "created_at": "2026-11-27T15:28:30.473163+00:00"
+}

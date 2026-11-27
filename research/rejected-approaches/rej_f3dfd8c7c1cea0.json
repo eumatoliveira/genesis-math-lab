@@ -1,0 +1,8 @@
+{
+  "rejection_id": "rej_f3dfd8c7c1cea0",
+  "problem_id": "goldbach",
+  "strategy": "symbolic_evolution",
+  "hypothesis_id": "hyp_8055c56e881ede",
+  "reason": "Refutada por contraexemplo exato do Counterexample Hunter (Agente 10).",
+  "created_at": "2026-11-27T15:28:31.791457+00:00"
+}

@@ -1,0 +1,8 @@
+{
+  "rejection_id": "rej_17fe658ce0e82a",
+  "problem_id": "perfect-cuboid",
+  "strategy": "symbolic_evolution",
+  "hypothesis_id": "hyp_6de18831e91036",
+  "reason": "Refutada por contraexemplo exato do Counterexample Hunter (Agente 10).",
+  "created_at": "2026-11-27T15:28:32.467016+00:00"
+}

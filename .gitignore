@@ -1,0 +1,20 @@
+# Dependencies & builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+
+# Python caches & logs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Large binary books & generated PDF/text downloads inside books/ (keep manifest.json + research metadata)
+research/references/books/*.pdf
+research/references/books/*.txt
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini

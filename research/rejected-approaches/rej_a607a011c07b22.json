@@ -1,0 +1,8 @@
+{
+  "rejection_id": "rej_a607a011c07b22",
+  "problem_id": "collatz",
+  "strategy": "symbolic_evolution",
+  "hypothesis_id": "hyp_f8eb5737e6802a",
+  "reason": "Refutada por contraexemplo exato do Counterexample Hunter (Agente 10).",
+  "created_at": "2026-11-27T15:28:30.873260+00:00"
+}

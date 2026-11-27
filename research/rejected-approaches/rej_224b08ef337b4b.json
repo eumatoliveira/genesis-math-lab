@@ -1,0 +1,8 @@
+{
+  "rejection_id": "rej_224b08ef337b4b",
+  "problem_id": "riemann-hypothesis",
+  "strategy": "symbolic_evolution",
+  "hypothesis_id": "hyp_c55511c709aa79",
+  "reason": "Refutada por contraexemplo exato do Counterexample Hunter (Agente 10).",
+  "created_at": "2026-11-27T15:28:34.015025+00:00"
+}
