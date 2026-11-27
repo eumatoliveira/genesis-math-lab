@@ -955,6 +955,23 @@ export function EditorialHomeView({
           </div>
           <div>Execução Local Reprodutível · SHA-256 Auditável · © 2026 GENESIS Research Lab</div>
         </div>
+
+        <div className="mx-auto mt-4 max-w-7xl space-y-1 text-[11px] leading-relaxed text-[#444746]">
+          <p className="font-semibold text-[#1F1F1F]">
+            © 2026 Matheus Oliveira — genesis.{' '}
+            {isEn ? 'Discovery, mathematical direction and research by the author.' : 'Descoberta, direção matemática e pesquisa do autor.'}
+          </p>
+          <p>
+            {isEn
+              ? 'Developed in collaboration with Gemini 4 Neon by Google DeepMind (AI-assisted engineering), combined with the author’s expertise in mathematics and the study of ancient civilizations, mathematicians, physicists and chemists.'
+              : 'Desenvolvido em colaboração com o Gemini 4 Neon, do Google DeepMind (engenharia assistida por IA), somado à expertise do autor em matemática e no estudo de antigas civilizações, matemáticos, físicos e químicos.'}
+          </p>
+          <p className="text-[10px] text-[#5F6368]">
+            {isEn
+              ? 'Gemini, Google and Google DeepMind are trademarks of Google LLC. This is an independent project, not affiliated with or endorsed by Google.'
+              : 'Gemini, Google e Google DeepMind são marcas registradas da Google LLC. Projeto independente, sem afiliação ou endosso do Google.'}
+          </p>
+        </div>
       </footer>
     </div>
   )
